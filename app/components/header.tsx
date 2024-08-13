@@ -11,7 +11,9 @@ const Header = () => {
       </Head>
       <header className="py-6">
         <div className="container mx-auto px-6 flex justify-between items-center">
-          <Image src={logo} alt="Mohit Singh Logo" width={40} height={40} />
+          <a href="/">
+            <Image src={logo} alt="Mohit Singh Logo" width={40} height={40} />
+          </a>
           <nav>
             <ul className="flex space-x-8">
               {/* <li>
@@ -38,14 +40,31 @@ const Header = () => {
                 </a>
               </li> */}
               <li>
-                <a
+                {/* <a
                   className="resumeBtn text-l"
                   href="https://drive.google.com/file/d/1c6FX13IKiF6xaQidbB5ZGuGzIbrNVETB/view?usp=drive_link"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <span>Resume</span>
-                </a>
+                </a> */}
+
+                <button className="resumeBtn text-white py-2 px-4 rounded inline-flex items-center">
+                  <a
+                    href="https://drive.google.com/file/d/1c6FX13IKiF6xaQidbB5ZGuGzIbrNVETB/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <svg
+                      className="fill-current w-4 h-4 mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                    >
+                      <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                    </svg>
+                    <span>Resume</span>
+                  </a>
+                </button>
               </li>
             </ul>
           </nav>

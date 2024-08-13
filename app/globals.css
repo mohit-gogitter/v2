@@ -94,16 +94,19 @@ footer {
     background-position: 0% 50%;
   }
 }
-
+a{
+  z-index: 99;
+  display: flex;
+  align-items: center;
+}
 .resumeBtn {
-  display: block;
-  width: 7rem;
-  height: 2rem;
+  z-index: 1;
+  width: 8rem;
   line-height: 1.7rem;
   text-decoration: none;
   color: white;
   border: 2px solid #ff003b;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   text-align: center;
   position: relative;
   transition: all 0.35s;
