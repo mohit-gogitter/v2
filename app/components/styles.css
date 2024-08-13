@@ -1,0 +1,23 @@
+.display-inline-block{
+    display: inline-block;
+}
+
+.diamond {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: red; /* Change color as needed */
+    top: -10px;
+    left: -5px;
+  }
+  .diamond:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -10px;
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: red; /* Change color as needed */
+  }

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Metrophobic:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  overflow: auto;
+}
+html,
+body {
+  font-family: "Metrophobic", sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0e161a,
+    #223242,
+    #151d20,
+    #163040,
+    #0e1113
+  );
+  color: theme("colors.foreground");
+  height: 100%;
+  overflow: auto;
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: theme("colors.accent");
+}
+
+footer {
+  border-top-width: 0.5px;
+  border-top-style: solid;
+  border-top-color: #515151;
+}
+
+.pattern-overlay {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+}
+
+.pattern-overlay-rotate {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+        circle,
+        rgba(255, 255, 255, 0.1) 2%,
+        transparent 2%
+      )
+      center/150px 150px,
+    radial-gradient(circle, rgba(255, 255, 255, 0.05) 2%, transparent 2%)
+      center/75px 75px;
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rgb-button {
+  background: linear-gradient(45deg, #488f94, #16c562, #0d013e);
+  background-size: 600% 600%;
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.resumeBtn {
+  display: block;
+  width: 7rem;
+  height: 2rem;
+  line-height: 1.7rem;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #ff003b;
+  letter-spacing: 2px;
+  text-align: center;
+  position: relative;
+  transition: all 0.35s;
+}
+
+.resumeBtn span {
+  position: relative;
+  z-index: 2;
+}
+
+.resumeBtn:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #ff003b;
+  transition: all 0.35s;
+}
+
+.resumeBtn:hover {
+  color: #fff;
+}
+
+.resumeBtn:hover:after {
+  width: 100%;
+}
+
+.glowing-border {
+  animation: glowing 5s infinite;
+}
+@keyframes glowing {
+  0% {
+    border-color: #06ffde;
+    box-shadow: 0 0 5px #06ffde;
+  }
+  50% {
+    border-color: #00ff95;
+    box-shadow: 0 0 1px #00ff95;
+  }
+  100% {
+    border-color: #06ffde;
+    box-shadow: 0 0 5px #06ffde;
+  }
+}
+
+.webkit-center {
+  text-align: -webkit-center;
+}
+
+.hover\:scale-120:hover {
+  transform: scale(1.2);
+}
+.hover\:text-red-500:hover {
+  color: #f87171; /* Tailwind's red-500 color */
+}
+
