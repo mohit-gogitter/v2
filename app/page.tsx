@@ -13,35 +13,35 @@ const Home = () => {
       {/* <Header></Header> */}
       <main className="">
         {/* Hero Section */}
-        <div className="md:grid md:grid-cols-12 md:divide-x-2 flex flex-col-reverse divide-y divide-y-reverse border-0">
+        <div className="sm:grid sm:grid-cols-12 sm:divide-x-2 flex flex-col-reverse divide-y divide-y-reverse border-0">
           <div className="webkit-center border-none col-span-7">
-            <section className="text-center py-14 pl-4">
+            <section className="text-center py-14">
               <div className="flex justify-center">
-                <h2 className="text-4xl float-left md:text-5xl font-bold mb-4">
+                <h2 className="text-4xl float-left sm:text-5xl font-bold mb-4">
                   Hey, I&apos;m&nbsp;
                 </h2>
                 <Image
                   className="float-left sm:hidden mb-4"
-                   height={40}
-                   width={40}
+                  height={40}
+                  width={40}
                   src={MyLogo}
                   alt="Mohit"
-                  style={{ objectFit:"contain"}}
+                  style={{ objectFit: "contain" }}
                 ></Image>
                 <Image
                   className="float-left hidden sm:block mb-4"
-                   height={50}
-                   width={50}
+                  height={50}
+                  width={50}
                   src={MyLogo}
                   alt="Mohit"
-                  style={{ objectFit:"contain"}}
+                  style={{ objectFit: "contain" }}
                 ></Image>
-                <h2 className=" float-left text-4xl md:text-5xl font-bold mb-4">
+                <h2 className=" float-left text-4xl sm:text-5xl font-bold mb-4">
                   ohit,
                 </h2>
                 <br />
               </div>
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
                 Software Engineer
               </h2>
               <p className="text-xl mb-2 text-gray-400 text-justify px-8">
@@ -52,21 +52,17 @@ const Home = () => {
                 </b>
                 , a dynamic Lead Full Stack Software Engineer with a robust
                 technical acumen and a proven track record in driving
-                large-scale projects to successful completion. <br></br>
+                large-scale projects to successful completion. <br />
+                <br />
                 With over a decade of experience, I specialize in developing and
                 leading enterprise-level applications using a wide array of
                 technologies including C#, .NET, ASP.NET Core, Node.js, Vue.js,
                 React.js, and more.
               </p>
 
-              <div className="webkit-center mt-6 grid grid-cols-8">
-                <a></a>
-                <a></a>
-                <a
-                  className=""
-                  href="https://github.com/mohit-gogitter"
-                  target="_blank"
-                >
+              <div className="webkit-center mt-6 grid grid-cols-6">
+                <a href="" target="_blank"></a>
+                <a href="https://github.com/mohit-gogitter" target="_blank">
                   <svg
                     className="h-8 w-8 text-slate-500 hover:text-white hover:scale-120"
                     viewBox="0 0 24 24"
@@ -77,6 +73,7 @@ const Home = () => {
                     <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
                   </svg>
                 </a>
+
                 <a
                   href="https://www.linkedin.com/in/mohit-singh-15a82288/"
                   target="_blank"
@@ -122,7 +119,6 @@ const Home = () => {
                   </svg>
                 </a>
                 <a></a>
-                <a></a>
               </div>
               <div className="flex justify-center space-x-4 pt-8">
                 <Link
@@ -148,7 +144,7 @@ const Home = () => {
             </section>
           </div>
           <div className="webkit-center border-none float-left col-span-5">
-            <div>
+            <div className="sm:py-14">
               <Image
                 className="w-80 h-80 inline-flex border-2 rounded-full glowing-border mx-auto object-cover left-0"
                 src={MyPic}
@@ -158,10 +154,16 @@ const Home = () => {
                 style={{ width: "50%", height: "40%" }}
               />
             </div>
-            <div className="hidden sm:block text-right text-xs text-gray-500 bottom-0 right-0 absolute mb-16 italic">
-              <p className="pr-4">Loosely designed in <b>Figma</b> and coded in <b>Visual Studio Code</b> by yours truly.</p>
-              <p className="pr-4">Built with <b>Next.js</b> and <b>Tailwind CSS</b>, deployed with <b>Vercel</b>.</p>
-            </div>
+            {/* <div className="hidden sm:block text-right text-xs text-gray-500 bottom-0 right-0 absolute mb-16 italic">
+              <p className="pr-4">
+                Loosely designed in <b>Figma</b> and coded in{" "}
+                <b>Visual Studio Code</b> by yours truly.
+              </p>
+              <p className="pr-4">
+                Built with <b>Next.js</b> and <b>Tailwind CSS</b>, deployed with{" "}
+                <b>Vercel</b>.
+              </p>
+            </div> */}
           </div>
         </div>
       </main>
