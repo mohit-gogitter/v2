@@ -94,8 +94,7 @@ footer {
     background-position: 0% 50%;
   }
 }
-a{
-  z-index: 99;
+a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -165,4 +164,3 @@ a{
 .hover\:text-red-500:hover {
   color: #f87171; /* Tailwind's red-500 color */
 }
-

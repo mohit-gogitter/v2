@@ -1,9 +1,7 @@
 // app/page.tsx
 "use client";
-import Header from "./components/header";
-import Footer from "./components/footer";
 import Image from "next/image";
-import "./components/styles.css";
+import "./explore/styles.css";
 import MyLogo from "../public/logo-no-background.png";
 import MyPic from "../public/images/my_pic_4.jpg";
 import Link from "next/link";
@@ -11,17 +9,17 @@ const Home = () => {
   return (
     <div className="flex flex-col justify-between text-foreground">
       {/* <Header></Header> */}
-      <main className="">
+      <main>
         {/* Hero Section */}
-        <div className="sm:grid sm:grid-cols-12 sm:divide-x-2 flex flex-col-reverse divide-y divide-y-reverse border-0">
+        <div className="md:grid md:grid-cols-12 md:divide-x-2 flex flex-col-reverse divide-y divide-y-reverse border-0">
           <div className="webkit-center border-none col-span-7">
             <section className="text-center py-14">
               <div className="flex justify-center">
-                <h2 className="text-4xl float-left sm:text-5xl font-bold mb-4">
+                <h2 className="text-4xl float-left md:text-5xl font-bold mb-4">
                   Hey, I&apos;m&nbsp;
                 </h2>
                 <Image
-                  className="float-left sm:hidden mb-4"
+                  className="float-left md:hidden mb-4"
                   height={40}
                   width={40}
                   src={MyLogo}
@@ -29,19 +27,19 @@ const Home = () => {
                   style={{ objectFit: "contain" }}
                 ></Image>
                 <Image
-                  className="float-left hidden sm:block mb-4"
+                  className="float-left hidden md:block mb-4"
                   height={50}
                   width={50}
                   src={MyLogo}
                   alt="Mohit"
                   style={{ objectFit: "contain" }}
                 ></Image>
-                <h2 className=" float-left text-4xl sm:text-5xl font-bold mb-4">
+                <h2 className=" float-left text-4xl md:text-5xl font-bold mb-4">
                   ohit,
                 </h2>
                 <br />
               </div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4">
                 Software Engineer
               </h2>
               <p className="text-xl mb-2 text-gray-400 text-justify px-8">
@@ -120,9 +118,9 @@ const Home = () => {
                 </a>
                 <a></a>
               </div>
-              <div className="flex justify-center space-x-4 pt-8">
+              <div className="flex justify-center space-x-4 mt-9">
                 <Link
-                  href="../components/explore"
+                  href="../explore/about"
                   className="rgb-button text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110"
                 >
                   Explore{" "}
@@ -144,7 +142,7 @@ const Home = () => {
             </section>
           </div>
           <div className="webkit-center border-none float-left col-span-5">
-            <div className="sm:py-14">
+            <div className="md:py-14">
               <Image
                 className="w-80 h-80 inline-flex border-2 rounded-full glowing-border mx-auto object-cover left-0"
                 src={MyPic}
@@ -154,7 +152,7 @@ const Home = () => {
                 style={{ width: "50%", height: "40%" }}
               />
             </div>
-            {/* <div className="hidden sm:block text-right text-xs text-gray-500 bottom-0 right-0 absolute mb-16 italic">
+            {/* <div className="hidden md:block text-right text-xs text-gray-500 bottom-0 right-0 absolute mb-16 italic">
               <p className="pr-4">
                 Loosely designed in <b>Figma</b> and coded in{" "}
                 <b>Visual Studio Code</b> by yours truly.
