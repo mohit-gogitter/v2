@@ -34,17 +34,17 @@ const Navbar = () => {
         <nav>
           <ul className={getNavBarClasses()}>
             <li>
-              <Link href="./about" className="hover:text-cyan-300 text-lg">
+              <a href="./about" className="hover:text-cyan-300 text-lg">
                 01 &nbsp;<span className="text-cyan-300">About</span>
-              </Link>
+              </a>
             </li>
             <li>
-              <Link
+              <a
                 href="./experience"
                 className="hover:text-cyan-300 text-lg"
               >
                 02 &nbsp;<span className="text-cyan-300">Experience</span>
-              </Link>
+              </a>
             </li>
             <li>
               <a href="./projects" className="hover:text-cyan-300 text-lg">
@@ -56,7 +56,7 @@ const Navbar = () => {
                 04 &nbsp;<span className="text-cyan-300">Contact</span>
               </a>
             </li>
-            <li className="block md:hidden">
+            <li className="text-center block md:hidden">
               <ResumeBtn />
             </li>
           </ul>
