@@ -1,21 +1,17 @@
 // app/layout.tsx
+"use client";
 import "./globals.css";
 import { ReactNode } from "react";
-import Header from "./components/header";
-import Footer from "./components/footer";
-
-export const metadata = {
-  title: "Mohit Singh",
-  description: "Portfolio of Mohit Singh, a software engineer",
-};
+import Header from "./explore/header";
+import Footer from "./explore/footer";
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Header></Header>
+        <Header />
         {children}
-        <Footer></Footer>
+        <Footer />
       </body>
     </html>
   );
