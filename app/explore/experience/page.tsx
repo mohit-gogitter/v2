@@ -25,8 +25,8 @@ const Experience = () => {
     },
   ];
   return (
-    <div>
-      <div className="mb-4 p-6 grid md:grid-cols-8 md:p-0">
+    <div className="bg-neutral-800 overflow-auto">
+      <div className="p-6 grid md:grid-cols-8 md:p-0">
         <div className="md:mt-32 webkit-center col-span-1">
           <div className="hidden md:block">
             <a className="h-12" href="" target="_blank"></a>
