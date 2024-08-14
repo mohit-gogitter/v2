@@ -19,9 +19,6 @@ body {
     #0e1113
   );
   color: theme("colors.foreground");
-  height: 100%;
-  overflow: auto;
-  width: 100%;
 }
 
 h1,

@@ -1,7 +1,7 @@
 "use client";
 const About = () => {
   return (
-    <div className="bg-slate-700 overflow-auto">
+    <div className="bg-slate-900 pb-4">
       <div className=" p-6 grid md:grid-cols-8 md:p-0">
         <div className="md:mt-32 webkit-center col-span-1">
           <div className="hidden md:block"> 
@@ -70,7 +70,7 @@ const About = () => {
             <a className="h-12" href=""></a>
           </div>
         </div>
-        <div className="col-span-6 text-justify h-screen">
+        <div className="col-span-6 text-justify">
           {/* <h2 className="text-4xl md:text-5xl font-bold mb-4"></h2> */}
           <div className="md:mt-8">
             <a
