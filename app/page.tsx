@@ -13,7 +13,7 @@ const Home = () => {
         {/* Hero Section */}
         <div className="md:grid md:grid-cols-12 md:divide-x-2 flex flex-col-reverse divide-y divide-y-reverse border-0">
           <div className="webkit-center border-none col-span-7">
-            <section className="text-center py-14">
+            <section className="text-center py-4">
               <div className="flex justify-center">
                 <h2 className="text-4xl float-left md:text-5xl font-bold mb-4">
                   Hey, I&apos;m&nbsp;
@@ -48,14 +48,10 @@ const Home = () => {
                   <span className="text-emerald-500">M</span>ohit{" "}
                   <span className="text-emerald-500">S</span>ingh
                 </b>
-                , a dynamic Lead Full Stack Software Engineer with a robust
-                technical acumen and a proven track record in driving
-                large-scale projects to successful completion. <br />
+                , a seasoned software engineer with a flair for turning visionary concepts into functional realities. <br/><br/>
+                Over the past decade, I’ve been at the forefront of web development 🌐, leading projects that marry form and function in the most seamless ways. My approach to technology is holistic—seeing the big picture while honing in on the smallest details 🔍 to ensure that every project is not only built to last but also to inspire💡. <br/><br/> 
+                I’m all about leveraging the latest in tech to create solutions that are both innovative and practical, setting new standards in the industry 🚀.<br/> Ready to build the future, one line of code at a time? 💻
                 <br />
-                With over a decade of experience, I specialize in developing and
-                leading enterprise-level applications using a wide array of
-                technologies including C#, .NET, ASP.NET Core, Node.js, Vue.js,
-                React.js, and more.
               </p>
 
               <div className="webkit-center mt-6 grid grid-cols-6">
@@ -118,7 +114,7 @@ const Home = () => {
                 </a>
                 <a></a>
               </div>
-              <div className="flex justify-center space-x-4 mt-9">
+              <div className="flex justify-center space-x-4 mt-6">
                 <Link
                   href="../explore/about"
                   className="rgb-button text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110"
