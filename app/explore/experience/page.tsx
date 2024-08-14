@@ -1,6 +1,29 @@
 "use client";
 import "../styles.css";
 const Experience = () => {
+  const experiences = [
+    {
+      company: "CeX Webuy Entertainment Pvt. Ltd.",
+      role: "Lead Software Engineer",
+      duration: "Feb 2022 - Present",
+      description:
+        "Worked on various projects involving web development, backend services, and cloud infrastructure.",
+    },
+    {
+      company: "Deloitte Consulting USI Pvt. Ltd.",
+      role: "Senior Consultant",
+      duration: "Spe 2015 - Jan 2022",
+      description:
+        "Focused on building scalable backend services and API integrations.",
+    },
+    {
+      company: "Appeal Qualiserve Pvt. Ltd.",
+      role: "Junior Developer",
+      duration: "Jul 2014 - Oct 2014",
+      description:
+        "Gained experience in frontend development, working on a variety of web applications.",
+    },
+  ];
   return (
     <div>
       <div className="mb-4 p-6 grid md:grid-cols-8 md:p-0">
@@ -81,54 +104,19 @@ const Experience = () => {
               Work Experience
             </a>
           </div>
-          <div className="mt-8">
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-              mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-              semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-              porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-              ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-              viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
-              imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
-              ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
-              tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-              adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-              pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
-              tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
-              quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis
-              leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
-              magna
-            </p>
-            <br />
-            <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in Bookmarksgrove right at the coast of the Semantics, a
-              large language ocean. A small river named Duden flows by their
-              place and supplies it with the necessary regelialia. It is a
-              paradisematic country, in which roasted parts of sentences fly
-              into your mouth. Even the all-powerful Pointing has no control
-              about the blind texts it is an almost unorthographic life One day
-              however a small line of blind text by the name of Lorem Ipsum
-              decided to leave for the far World of Grammar.{" "}
-            </p>
-            <br />
-            <p>
-              One morning, when Gregor Samsa woke from troubled dreams, he found
-              himself transformed in his bed into a horrible vermin. He lay on
-              his armour-like back, and if he lifted his head a little he could
-              see his brown belly, slightly domed and divided by arches into
-              stiff sections. The bedding was hardly able to cover it and seemed
-              ready to slide off any moment. His many legs, pitifully thin
-              compared with the size of the rest of him, waved about helplessly
-              as he looked.
-            </p>
+          <div className="container mx-auto mt-6">
+            <div className="space-y-8">
+              {experiences.map((experience, index) => (
+                <div key={index} className="bg-gradient-to-tr from-neutral-900 rounded-lg shadow-lg p-6">
+                  <h2 className="text-lg md:text-2xl font-semibold">
+                    {experience.company}
+                  </h2>
+                  <p className="text-gray-400 italic">{experience.role}</p>
+                  <p className="text-gray-400 mb-4">{experience.duration}</p>
+                  <p className="text-slate-300">{experience.description}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
         <div className="col-span-1 justify-center"></div>
