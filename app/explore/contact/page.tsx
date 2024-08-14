@@ -70,7 +70,7 @@ const Contact = () => {
             <a className="h-12" href=""></a>
           </div>
         </div>
-        <div className="col-span-6 text-justify h-screen">
+        <div className="col-span-6 text-justify">
           {/* <h2 className="text-4xl md:text-5xl font-bold mb-4"></h2> */}
           <div className="md:mt-8">
             <a

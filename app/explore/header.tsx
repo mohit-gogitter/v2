@@ -12,11 +12,10 @@ const Header = () => {
   function getBorderClasses() {
     let borderClasses = [];
     if (isLandingPage) {
-      borderClasses = ["py-6", "sticky", "top-0"];
+      borderClasses = ["py-6", , "top-0"];
     } else {
       borderClasses = [
         "py-6",
-        "sticky",
         "top-0",
         "border-b-slate-500",
         "border-b",
