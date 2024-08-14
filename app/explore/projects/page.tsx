@@ -1,5 +1,20 @@
 "use client";
 const Projects = () => {
+  const projects = [
+    {
+      title: 'Project One',
+      description: 'A brief description of Project One.',
+      image: '/path/to/image1.jpg',
+      link: 'https://project-one.com',
+    },
+    {
+      title: 'Project Two',
+      description: 'A brief description of Project Two.',
+      image: '/path/to/image2.jpg',
+      link: 'https://project-two.com',
+    },
+    // Add more projects as needed
+  ];
 return (
     <div>
          {/* Projects Section */}

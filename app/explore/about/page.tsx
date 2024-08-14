@@ -80,7 +80,7 @@ const About = () => {
               About Me
             </a>
           </div>
-          <div className="mt-8">
+          <div className="text-xl mt-8">
             <p>
               Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
               commodo ligula eget dolor. Aenean massa. Cum sociis natoque
