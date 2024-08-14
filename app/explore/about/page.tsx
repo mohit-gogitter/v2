@@ -2,8 +2,8 @@
 const About = () => {
   return (
     <div>
-      <div className="mb-4 grid grid-cols-8">
-        <div className=" mt-32 webkit-center col-span-1">
+      <div className="mb-4 p-6 grid md:grid-cols-8 md:p-0">
+        <div className="md:mt-32 webkit-center col-span-1">
           <div className="hidden md:block">
             <a className="h-12" href="" target="_blank"></a>
             <a
@@ -72,7 +72,7 @@ const About = () => {
         </div>
         <div className="col-span-6 text-justify h-screen">
           {/* <h2 className="text-4xl md:text-5xl font-bold mb-4"></h2> */}
-          <div className="mt-8">
+          <div className="md:mt-8">
             <a
               target="_blank"
               className="text-4xl text-white font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_4px] bg-no-repeat bg-bottom py-2"
