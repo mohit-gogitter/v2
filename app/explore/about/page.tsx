@@ -1,10 +1,42 @@
 "use client";
+import { useState, useEffect } from "react";
+import "../styles.css";
+import Qualification from "./qualification";
+import Experience from "./experience";
 const About = () => {
+  const [activeSection, setActiveSection] = useState<string>("about");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("div[id]");
+    const options = {
+      rootMargin: "0px",
+      threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.getAttribute("id") || "about");
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
+
   return (
-    <div className="bg-slate-900 pb-4">
-      <div className=" p-6 grid md:grid-cols-8 md:p-0">
+    <div className="bg-slate-900 pb-4 ">
+      <div className="md:grid md:grid-cols-8">
         <div className="md:mt-32 webkit-center col-span-1">
-          <div className="hidden md:block"> 
+          <div className="hidden md:inline-block fixed">
             <a className="h-12" href="" target="_blank"></a>
             <a
               className="h-12"
@@ -21,7 +53,6 @@ const About = () => {
                 <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
               </svg>
             </a>
-
             <a
               className="h-12"
               href="https://www.linkedin.com/in/mohit-singh-15a82288/"
@@ -42,6 +73,7 @@ const About = () => {
                 <circle cx="4" cy="4" r="2" />
               </svg>
             </a>
+
             <a href="" className="h-12">
               <svg
                 className="h-8 w-8 text-slate-500  hover:text-red-500 hover:scale-120"
@@ -70,67 +102,134 @@ const About = () => {
             <a className="h-12" href=""></a>
           </div>
         </div>
-        <div className="col-span-6 text-justify">
-          {/* <h2 className="text-4xl md:text-5xl font-bold mb-4"></h2> */}
-          <div className="md:mt-8">
-            <a
-              target="_blank"
-              className="text-4xl text-white font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_4px] bg-no-repeat bg-bottom py-2"
-            >
-              About Me
-            </a>
-          </div>
-          <div className="text-xl mt-8">
-            <p>
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-              mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-              semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
-              porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem
-              ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus
-              viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean
-              imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper
-              ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,
-              tellus eget condimentum rhoncus, sem quam semper libero, sit amet
-              adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus
-              pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt
-              tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam
-              quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis
-              leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis
-              magna
-            </p>
-            <br />
-            <p>
-              Far far away, behind the word mountains, far from the countries
-              Vokalia and Consonantia, there live the blind texts. Separated
-              they live in Bookmarksgrove right at the coast of the Semantics, a
-              large language ocean. A small river named Duden flows by their
-              place and supplies it with the necessary regelialia. It is a
-              paradisematic country, in which roasted parts of sentences fly
-              into your mouth. Even the all-powerful Pointing has no control
-              about the blind texts it is an almost unorthographic life One day
-              however a small line of blind text by the name of Lorem Ipsum
-              decided to leave for the far World of Grammar.{" "}
-            </p>
-            <br />
-            <p>
-              One morning, when Gregor Samsa woke from troubled dreams, he found
-              himself transformed in his bed into a horrible vermin. He lay on
-              his armour-like back, and if he lifted his head a little he could
-              see his brown belly, slightly domed and divided by arches into
-              stiff sections. The bedding was hardly able to cover it and seemed
-              ready to slide off any moment. His many legs, pitifully thin
-              compared with the size of the rest of him, waved about helplessly
-              as he looked.
-            </p>
+        <div className="md:col-span-7 text-justify md:mr-8">
+          <div className="md:grid md:grid-cols-3 gap-4">
+            <div className="hidden md:block md:col-span-1 sticky-div p-4">
+              <div className="md:mt-14">
+                <h1 className="text-5xl font-bold text-gray-900 relative mb-1">
+                  <span className="relative z-10">&nbsp;Mohit Singh</span>
+                  <span className="absolute top-0 left-0 w-72 md:w-80 h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg transform -rotate-2 -translate-y-1 translate-x-1 z-0"></span>
+                  <span className="block h-1 bg-gradient-to-r from-purple-500 to-blue-400 mt-2 transform scale-x-0 origin-left transition-transform duration-500 ease-in-out group-hover:scale-x-100"></span>
+                </h1>
+                <h4 className="relative inline-block text-l font-medium text-gray-800 bg-white px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500 transform -rotate-2">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg"></span>
+                  <span className="relative z-10 font-semibold">
+                    Full Stack Software Engineer
+                  </span>
+                </h4>
+              </div>
+              <div className="mt-10 ml-4 text-base">
+                <a
+                  href="#about"
+                  className={`exploreLink group flex items-center text-base font-semibold transition-all duration-300 ${
+                    activeSection === "about"
+                      ? "text-teal-500"
+                      : "text-gray-300"
+                  }`}
+                >
+                  <span
+                    className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                      activeSection === "about" ? "w-20" : "group-hover:w-20"
+                    }`}
+                  ></span>
+                  <span>ABOUT</span>
+                </a>
+                <a
+                  href="#experience"
+                  className={`exploreLink group flex items-center font-semibold transition-all duration-300 ${
+                    activeSection === "experience"
+                      ? "text-teal-500"
+                      : "text-gray-300"
+                  }`}
+                >
+                  <span
+                    className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                      activeSection === "experience"
+                        ? "w-20"
+                        : "group-hover:w-20"
+                    }`}
+                  ></span>
+                  <span>EXPERIENCE</span>
+                </a>
+                <a
+                  href="#qualification"
+                  className={`exploreLink group flex items-center font-semibold transition-all duration-300 ${
+                    activeSection === "qualification"
+                      ? "text-teal-500"
+                      : "text-gray-300"
+                  }`}
+                >
+                  <span
+                    className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                      activeSection === "qualification"
+                        ? "w-20"
+                        : "group-hover:w-20"
+                    }`}
+                  ></span>
+                  <span>QUALIFICATION</span>
+                </a>
+              </div>
+            </div>
+            <div className="md:col-span-2 relative w-full p-4">
+              <div className="md:hidden mb-6">
+                <h1 className="text-5xl font-bold text-gray-900 relative mb-1">
+                  <span className="relative z-10">&nbsp;Mohit Singh</span>
+                  <span className="absolute top-0 left-0 w-72 md:w-80 h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg transform -rotate-2 -translate-y-1 translate-x-1 z-0"></span>
+                  <span className="block h-1 bg-gradient-to-r from-purple-500 to-blue-400 mt-2 transform scale-x-0 origin-left transition-transform duration-500 ease-in-out group-hover:scale-x-100"></span>
+                </h1>
+                <h4 className="relative inline-block text-l font-medium text-gray-800 bg-white px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500 transform -rotate-2">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg"></span>
+                  <span className="relative z-10 font-semibold">
+                    Full Stack Software Engineer
+                  </span>
+                </h4>
+              </div>
+
+              <div id="about">
+                <h4 className="text-xl font-bold text-white mb-4">ABOUT</h4>
+                <span className="text-gray-400">
+                  Back in 2014, I took my first steps into the world of coding
+                  while developing a web and mobile application for pre-schools.
+                  Little did I know, this would lead me down a path where I’d
+                  get to shape and refine my skills in software engineering and
+                  web development.
+                  <br />
+                  <br /> Fast forward to today, and I've had the privilege of
+                  leading software projects across various sectors—building
+                  innovative solutions for an advertising agency, a start-up, a
+                  global corporation, and even a digital product studio.
+                  Currently, I’m focused on creating accessible and impactful
+                  user interfaces at CeX Webuy Entertainment, where I lead a
+                  talented team of software engineers. I thrive in the
+                  intersection of design and engineering, ensuring that the
+                  solutions I build are not only robust under the hood but also
+                  deliver a seamless user experience. Outside of work, I’ve
+                  contributed to tech by developing a Quality of Service Tool
+                  and even ventured into the world of IoT with a Smart Home
+                  project. <br />
+                  <br />
+                  When I’m not coding, you might find me rock climbing, diving
+                  into a good book, spending time with my family, or tinkering
+                  with new tech ideas. My journey in tech is all about
+                  continuous learning and pushing the boundaries of what’s
+                  possible—one project at a time.
+                </span>
+              </div>
+              <div id="experience" className="mt-10">
+                <h4 className=" text-xl font-bold text-white mb-4">
+                  EXPERIENCE
+                </h4>
+                <Experience />
+              </div>
+              <div id="qualification">
+                <h4 className=" text-xl font-bold text-white mb-4">
+                  QUALIFICATION
+                </h4>
+                <Qualification />
+              </div>
+            </div>
           </div>
         </div>
-        <div className="col-span-1 justify-center"></div>
       </div>
     </div>
   );

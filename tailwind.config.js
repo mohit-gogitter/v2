@@ -11,9 +11,7 @@ module.exports = {
         background: '#1e1e1e',
         foreground: '#e4e4e7',
         accent: '#F4FDFD',
-        secondary: '#252525',
-        card: '#2a2a2a',
-        button: '#45A29E'
+
       },
     },
   },

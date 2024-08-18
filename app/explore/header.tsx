@@ -12,14 +12,9 @@ const Header = () => {
   function getBorderClasses() {
     let borderClasses = [];
     if (isLandingPage) {
-      borderClasses = ["py-6", , "top-0"];
+      borderClasses = ["py-4", , "top-0"];
     } else {
-      borderClasses = [
-        "py-6",
-        "top-0",
-        "border-b-slate-500",
-        "border-b",
-      ];
+      borderClasses = ["py-4", "top-0", "border-b-slate-500", "border-b"];
     }
     return borderClasses.join(" ");
   }
@@ -32,8 +27,19 @@ const Header = () => {
     }
     return resumeClasses.join(" ");
   }
+  function getHeaderClasses() {
+    let headerClasses = [];
+    {
+      if (isLandingPage) {
+        headerClasses = [""];
+      } else {
+        headerClasses = ["sticky-header"];
+      }
+    }
+    return headerClasses.join(" ");
+  }
   return (
-    <div>
+    <div className={getHeaderClasses()}>
       <Head>
         <Link rel="head-logo" href="/static/logo-no-background.png"></Link>
       </Head>

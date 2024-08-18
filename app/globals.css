@@ -6,6 +6,10 @@
 
 html {
   overflow: auto;
+  height: 100%;
+  width: 100%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
 }
 html,
 body {
@@ -161,4 +165,21 @@ a {
 }
 .hover\:text-red-500:hover {
   color: #f87171; /* Tailwind's red-500 color */
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 50; /* Ensure it stays above other content */
+  background: linear-gradient(
+    135deg,
+    rgba(14, 22, 26, 0.6),
+    rgba(34, 50, 66, 0.6),
+    rgba(21, 29, 32, 0.6),
+    rgba(22, 48, 64, 0.6),
+    rgba(14, 17, 19, 0.6)
+  );
+  backdrop-filter: blur(
+    10px
+  ); /* Optional: Add a blur effect to the background */
 }
