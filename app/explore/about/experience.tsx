@@ -43,7 +43,7 @@ const Experience = () => {
       ];
 
   return (
-    <div>
+    <div className="text-lg">
       <section className="mx-auto">
                   <div>
                     {experiences.map((exp, index) => (

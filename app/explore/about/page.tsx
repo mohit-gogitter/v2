@@ -171,7 +171,7 @@ const About = () => {
               </div>
             </div>
             <div className="md:col-span-2 relative w-full p-4">
-              <div className="md:hidden mb-6">
+              <div className="md:hidden mb-10">
                 <h1 className="text-5xl font-bold text-gray-900 relative mb-1">
                   <span className="relative z-10">&nbsp;Mohit Singh</span>
                   <span className="absolute top-0 left-0 w-72 md:w-80 h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg transform -rotate-2 -translate-y-1 translate-x-1 z-0"></span>
@@ -186,8 +186,8 @@ const About = () => {
               </div>
 
               <div id="about">
-                <h4 className="text-xl font-bold text-white mb-4">ABOUT</h4>
-                <span className="text-gray-400">
+                <h4 className="text-2xl font-bold text-white mb-4">ABOUT</h4>
+                <span className="text-gray-400 text-lg">
                   Back in 2014, I took my first steps into the world of coding
                   while developing a web and mobile application for pre-schools.
                   Little did I know, this would lead me down a path where I&apos;d
@@ -216,13 +216,13 @@ const About = () => {
                 </span>
               </div>
               <div id="experience" className="mt-10">
-                <h4 className=" text-xl font-bold text-white mb-4">
+                <h4 className=" text-2xl font-bold text-white mb-4">
                   EXPERIENCE
                 </h4>
                 <Experience />
               </div>
               <div id="qualification">
-                <h4 className=" text-xl font-bold text-white mb-4">
+                <h4 className=" text-2xl font-bold text-white mb-4">
                   QUALIFICATION
                 </h4>
                 <Qualification />

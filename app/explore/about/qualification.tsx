@@ -26,7 +26,7 @@ const Qualification = () => {
   ];
 
   return (
-    <div className="overflow-x-auto p-[2px] bg-indigo-300 shadow-md">
+    <div className="text-sm md:text-base overflow-x-auto p-[2px] bg-indigo-300 shadow-md">
       <div className="min-w-full divide-y divide-gray-700">
         <table className=" bg-gray-900 text-white">
           <thead>
