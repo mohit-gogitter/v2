@@ -190,7 +190,7 @@ const About = () => {
                 <span className="text-gray-400">
                   Back in 2014, I took my first steps into the world of coding
                   while developing a web and mobile application for pre-schools.
-                  Little did I know, this would lead me down a path where I’d
+                  Little did I know, this would lead me down a path where I&apos;d
                   get to shape and refine my skills in software engineering and
                   web development.
                   <br />
@@ -198,20 +198,20 @@ const About = () => {
                   leading software projects across various sectors—building
                   innovative solutions for an advertising agency, a start-up, a
                   global corporation, and even a digital product studio.
-                  Currently, I’m focused on creating accessible and impactful
+                  Currently, I&apos;m focused on creating accessible and impactful
                   user interfaces at CeX Webuy Entertainment, where I lead a
                   talented team of software engineers. I thrive in the
                   intersection of design and engineering, ensuring that the
                   solutions I build are not only robust under the hood but also
-                  deliver a seamless user experience. Outside of work, I’ve
+                  deliver a seamless user experience. Outside of work, I&apos;ve
                   contributed to tech by developing a Quality of Service Tool
                   and even ventured into the world of IoT with a Smart Home
                   project. <br />
                   <br />
-                  When I’m not coding, you might find me rock climbing, diving
+                  When I&apos;m not coding, you might find me rock climbing, diving
                   into a good book, spending time with my family, or tinkering
                   with new tech ideas. My journey in tech is all about
-                  continuous learning and pushing the boundaries of what’s
+                  continuous learning and pushing the boundaries of what&apos;s
                   possible—one project at a time.
                 </span>
               </div>
