@@ -13,7 +13,7 @@ const Home = () => {
         {/* Hero Section */}
         <div className="md:grid md:grid-cols-12 md:divide-x-2 flex flex-col-reverse divide-y divide-y-reverse border-0">
           <div className="webkit-center border-none col-span-7">
-            <section className="text-center py-4">
+            <section className="text-center py-8">
               <div className="flex justify-center">
                 <h2 className="text-4xl float-left md:text-5xl font-bold mb-4">
                   Hey, I&apos;m&nbsp;
@@ -48,10 +48,11 @@ const Home = () => {
                   <span className="text-emerald-500">M</span>ohit{" "}
                   <span className="text-emerald-500">S</span>ingh
                 </b>
-                , a seasoned software engineer with a flair for turning visionary concepts into functional realities. <br/><br/>
-                Over the past decade, I’ve been at the forefront of web development 🌐, leading projects that marry form and function in the most seamless ways. My approach to technology is holistic—seeing the big picture while honing in on the smallest details 🔍 to ensure that every project is not only built to last but also to inspire💡. <br/><br/> 
-                I’m all about leveraging the latest in tech to create solutions that are both innovative and practical, setting new standards in the industry 🚀.<br/> Ready to build the future, one line of code at a time? 💻
-                <br />
+                , a forward-thinking leader in web development🌐, carving paths through the dynamic world of software engineering.
+                <br /><br/>
+                I create dynamic, responsive, and aesthetically pleasing digital solutions that connect with users. With over a decade of experience at the helm of complex projects, I’m driven by a passion for discovering new possibilities and pushing the limits of what technology can achieve.
+                <br/>
+                Let’s code the future, one full-stack at a time. 💻
               </p>
 
               <div className="webkit-center mt-6 grid grid-cols-6">
@@ -161,7 +162,6 @@ const Home = () => {
           </div>
         </div>
       </main>
-      {/* <Footer></Footer> */}
     </div>
   );
 };

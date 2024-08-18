@@ -1,23 +1,54 @@
-.display-inline-block{
-    display: inline-block;
+.display-inline-block {
+  display: inline-block;
 }
 
 .diamond {
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-bottom-color: red; /* Change color as needed */
-    top: -10px;
-    left: -5px;
-  }
-  .diamond:after {
-    content: '';
-    position: absolute;
-    top: 10px;
-    left: -10px;
-    width: 0;
-    height: 0;
-    border: 10px solid transparent;
-    border-top-color: red; /* Change color as needed */
-  }
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: red; /* Change color as needed */
+  top: -10px;
+  left: -5px;
+}
+.diamond:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-top-color: red; /* Change color as needed */
+}
+
+.exploreLink {
+  margin-bottom: 1rem !important;
+  justify-content: start !important;
+}
+
+.sticky-div {
+  position: sticky;
+  top: 6rem;
+  height: fit-content;
+}
+.fixed-div{
+  position: fixed;
+}
+
+.triangle-bullet li {
+  position: relative;
+  padding-left: 1.5rem; /* Space for the bullet */
+}
+
+.triangle-bullet li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-top: 0.3rem solid transparent;
+  border-bottom: 0.3rem solid transparent;
+  border-left: 0.5rem solid #38b2ac; /* Triangle color */
+}
