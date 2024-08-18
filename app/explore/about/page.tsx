@@ -194,7 +194,7 @@ const About = () => {
                   get to shape and refine my skills in software engineering and
                   web development.
                   <br />
-                  <br /> Fast forward to today, and I've had the privilege of
+                  <br /> Fast forward to today, and I&apos;ve had the privilege of
                   leading software projects across various sectors—building
                   innovative solutions for an advertising agency, a start-up, a
                   global corporation, and even a digital product studio.
