@@ -33,7 +33,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-slate-900 pb-4 ">
+    <div className="bg-zinc-900 pb-4 ">
       <div className="md:grid md:grid-cols-8">
         <div className="md:mt-32 webkit-center col-span-1">
           <div className="hidden md:inline-block fixed">
