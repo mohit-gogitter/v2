@@ -7,7 +7,7 @@ export default function MyImage() {
     <div className="justify-center items-center mt-9 md:mt-0">
       <div className="relative w-64 h-64 md:w-80 md:h-80 group">
         {/* Stylish border */}
-        <div className="absolute inset-0 bg-gradient-to-br from-sky-300 to-gray-900 rounded-sm transform rotate-6 scale-105 group-hover:scale-110 transition duration-300"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-500 to-cyan-950 rounded-sm transform rotate-6 scale-105 group-hover:scale-110 transition duration-300"></div>
         
         {/* Image with shadow and effect */}
         <div className="relative w-full h-full bg-white rounded-sm overflow-hidden shadow-lg">

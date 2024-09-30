@@ -23,14 +23,26 @@ const Qualification = () => {
       location: "Pune, India",
       period: "07/2010- 05/2014",
     },
+    {
+      degree: "H.S.C (12th)",
+      institution: "Mumbai University",
+      location: "Mumbai, India",
+      period: "06/2009- 04/2010",
+    },
+    {
+      degree: "S.S.C (10th)",
+      institution: "Mumbai University",
+      location: "Mumbai, India",
+      period: "06/2007- 04/2008",
+    },
   ];
 
   return (
-    <div className="text-sm md:text-base overflow-x-auto p-[2px] bg-indigo-300 shadow-md">
-      <div className="min-w-full divide-y divide-gray-700">
-        <table className=" bg-gray-900 text-white">
+    <div className="text-sm md:text-base overflow-x-auto p-[2px] bg-stone-300 shadow-md">
+      <div className="min-w-full divide-y divide-stone-700">
+        <table className=" bg-neutral-900 text-white">
           <thead>
-            <tr className="border-b bg-gray-800 border-indigo-300">
+            <tr className="border-b bg-slate-900 border-stone-300">
               <th className="p-4 text-left">Period</th>
               <th className="p-4 text-left">Degree</th>
               <th className="p-4 text-left">Institution</th>
@@ -38,18 +50,18 @@ const Qualification = () => {
               <th className="p-4 text-left">Specialization / CGPA</th>
             </tr>
           </thead>
-          <tbody className="text-gray-300">
+          <tbody className="text-zinc-300">
             {educationDetails.map((edu, index) => (
               <tr key={index} className="border-b border-gray-700">
-                <td className="p-4">{edu.period}</td>
-                <td className="p-4">{edu.degree}</td>
-                <td className="p-4">{edu.institution}</td>
-                <td className="p-4">{edu.location}</td>
-                <td className="p-4">
+                <td className="p-3">{edu.period}</td>
+                <td className="p-3">{edu.degree}</td>
+                <td className="p-3">{edu.institution}</td>
+                <td className="p-3">{edu.location}</td>
+                <td className="p-3">
                   {edu.specialization ? (
                     <>
                       <div>{edu.specialization}</div>
-                      <div>{edu.cgpa}</div>
+                      <div className="font-bold text-green-600">{edu.cgpa}</div>
                     </>
                   ) : (
                     <>{edu.cgpa || ""}</>

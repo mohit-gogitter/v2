@@ -20,7 +20,7 @@ const Navbar = () => {
         "left-0",
         "gap-5",
         "flex-col",
-        "bg-slate-700 md:bg-inherit"
+        "bg-slate-900 md:bg-inherit"
       ];
     }
     else{

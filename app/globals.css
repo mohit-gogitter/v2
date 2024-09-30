@@ -26,9 +26,9 @@ body {
   background: linear-gradient(
     135deg,
     rgb(7, 12, 27),
-    #13181c,
-    rgb(3, 6, 14),
-    #13181c,
+    #0f1111,
+    rgb(5, 9, 16),
+    #090a0a,
     rgb(7, 12, 27)
   );
   color: theme("colors.foreground");
