@@ -53,7 +53,7 @@ const Experience = () => {
                           {exp.company} - {exp.location}
                         </p>
                         <p className="mb-2">{exp.period}</p>
-                        <ul className="triangle-bullet list-none space-y-2 text-zinc-400">
+                        <ul className="triangle-bullet list-none space-y-1 text-zinc-400">
                           {exp.responsibilities.map((responsibility, i) => (
                             <li key={i}>{responsibility}</li>
                           ))}

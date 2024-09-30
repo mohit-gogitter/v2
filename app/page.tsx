@@ -3,7 +3,7 @@
 import Image from "next/image";
 import "./explore/styles.css";
 import MyLogo from "../public/logo-no-background.png";
-import MyPic from "../public/images/my_pic_4.jpg";
+import MyImage from "./globalcomponents/image_square";
 import Link from "next/link";
 const Home = () => {
   return (
@@ -48,10 +48,16 @@ const Home = () => {
                   <span className="text-emerald-500">M</span>ohit{" "}
                   <span className="text-emerald-500">S</span>ingh
                 </b>
-                , a forward-thinking leader in web development🌐, carving paths through the dynamic world of software engineering.
-                <br /><br/>
-                I create dynamic, responsive, and aesthetically pleasing digital solutions that connect with users. With over a decade of experience at the helm of complex projects, I’m driven by a passion for discovering new possibilities and pushing the limits of what technology can achieve.
-                <br/>
+                , a forward-thinking leader in web development🌐, carving paths
+                through the dynamic world of software engineering.
+                <br />
+                <br />
+                I create dynamic, responsive, and aesthetically pleasing digital
+                solutions that connect with users. With over a decade of
+                experience at the helm of complex projects, I’m driven by a
+                passion for discovering new possibilities and pushing the limits
+                of what technology can achieve.
+                <br />
                 Let’s code the future, one full-stack at a time. 💻
               </p>
 
@@ -118,7 +124,7 @@ const Home = () => {
               <div className="flex justify-center space-x-4 mt-6">
                 <Link
                   href="../explore/about"
-                  className="rgb-button text-white font-bold py-4 px-8 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110"
+                  className="rgb-button text-white font-bold py-4 px-8 rounded-2xl shadow-full transform transition-transform duration-300 hover:scale-110"
                 >
                   Explore{" "}
                   <svg
@@ -140,25 +146,16 @@ const Home = () => {
           </div>
           <div className="webkit-center border-none float-left col-span-5">
             <div className="md:py-14">
-              <Image
+              {/* <Image
                 className="w-80 h-80 inline-flex border-2 rounded-full glowing-border mx-auto object-cover left-0"
                 src={MyPic}
                 alt="My Picture"
                 height={0}
                 width={0}
                 style={{ width: "50%", height: "40%" }}
-              />
+              /> */}
+              <MyImage></MyImage>
             </div>
-            {/* <div className="hidden md:block text-right text-xs text-gray-500 bottom-0 right-0 absolute mb-16 italic">
-              <p className="pr-4">
-                Loosely designed in <b>Figma</b> and coded in{" "}
-                <b>Visual Studio Code</b> by yours truly.
-              </p>
-              <p className="pr-4">
-                Built with <b>Next.js</b> and <b>Tailwind CSS</b>, deployed with{" "}
-                <b>Vercel</b>.
-              </p>
-            </div> */}
           </div>
         </div>
       </main>
