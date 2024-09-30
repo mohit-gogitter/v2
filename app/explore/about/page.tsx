@@ -104,23 +104,25 @@ const About = () => {
         </div>
         <div className="md:col-span-7 text-justify md:mr-8">
           <div className="md:grid md:grid-cols-3 gap-4">
-            <div className="block md:col-span-1 sticky-div p-4">
-              <div id="nameandrole" className="md:mt-14">
-                <h1 className="relative inline-block text-5xl font-medium text-gray-800 bg-purple-400 px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg"></span>
+            <div className="block md:col-span-1 sticky-div md:p-4">
+              <div id="nameandrole" className="hidden md:block md:mt-14">
+                <h1 className="relative inline-block text-5xl font-medium text-gray-800 bg-white px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 opacity-20 rounded-lg"></span>
                   <span className="relative z-10 font-semibold">
-                   Mohit Singh
+                    Mohit Singh
                   </span>
                 </h1>
-                <br/>
-                <h4 className="relative inline-block text-l font-medium text-gray-800 bg-white mt-2 px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg"></span>
+                <br />
+                <h4 className="relative inline-block text-l font-medium text-gray-800 bg-slate-50 mt-2 px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 opacity-20 rounded-lg"></span>
                   <span className="relative z-10 font-semibold">
                     Full Stack Software Engineer
                   </span>
                 </h4>
               </div>
-              <div id="verticalnavlinks" className="hidden md:block mt-10 text-base">
+              <div id="verticalnavlinks"
+                className="hidden md:block mt-10 text-lg"
+              >
                 <div className="flex flex-wrap justify-between ml-4 md:ml-0 md:flex-col">
                   <a
                     href="#about"
@@ -173,7 +175,9 @@ const About = () => {
                   </a>
                 </div>
               </div>
-              <div id="horizontalnavlinks" className="block md:hidden mt-4 text-base">
+              {/* <div id="horizontalnavlinks"
+                className="sticky block md:hidden mt-4 text-lg"
+              >
                 <div className=" bottom-0 left-0 w-full shadow-lg z-50">
                   <div className="flex justify-around">
                     <a
@@ -225,29 +229,15 @@ const About = () => {
                     </a>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
 
-            <div className="md:col-span-2 relative w-full p-4">
-              {/* <div className="md:hidden mb-10">
-                <h1 className="text-5xl font-bold text-gray-900 relative mb-1">
-                  <span className="relative z-10">&nbsp;Mohit Singh</span>
-                  <span className="absolute top-0 left-0 w-72 md:w-80 h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg transform -rotate-2 -translate-y-1 translate-x-1 z-0"></span>
-                  <span className="block h-1 bg-gradient-to-r from-purple-500 to-blue-400 mt-2 transform scale-x-0 origin-left transition-transform duration-500 ease-in-out group-hover:scale-x-100"></span>
-                </h1>
-                <h4 className="relative inline-block text-l font-medium text-gray-800 bg-white px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500 transform -rotate-2">
-                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg"></span>
-                  <span className="relative z-10 font-semibold">
-                    Full Stack Software Engineer
-                  </span>
-                </h4>
-              </div> */}
-
+            <div className="md:col-span-2 relative w-full p-4"> 
               <div id="about">
-                <h4 className="text-2xl font-bold text-white mb-4 relative">
+                <h4 className="mb-4 text-2xl text-white font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_4px] bg-no-repeat bg-bottom py-3 sticky top-[75px] z-10 backdrop-blur-md bg-opacity-100">
                   ABOUT
                 </h4>
-                <span className="text-gray-400 text-lg">
+                <span className="text-zinc-400 text-lg">
                   Back in 2014, I took my first steps into the world of coding
                   while developing a web and mobile application for pre-schools.
                   Little did I know, this would lead me down a path where
@@ -276,13 +266,13 @@ const About = () => {
                 </span>
               </div>
               <div id="experience" className="mt-10">
-                <h4 className="text-2xl font-bold text-white mb-4 relative">
+                <h4 className="mb-4 text-2xl text-white font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_4px] bg-no-repeat bg-bottom py-3 sticky top-[75px] z-10 backdrop-blur-md bg-opacity-100">
                   EXPERIENCE
                 </h4>
                 <Experience />
               </div>
-              <div id="qualification">
-                <h4 className="text-2xl font-bold text-white mb-4 relative">
+              <div id="qualification" className="mt-10">
+                <h4 className="mb-4 text-2xl text-white font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_4px] bg-no-repeat bg-bottom py-3 sticky top-[75px] z-10 backdrop-blur-md bg-opacity-100">
                   QUALIFICATION
                 </h4>
                 <Qualification />

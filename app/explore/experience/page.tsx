@@ -111,9 +111,9 @@ const Experience = () => {
                   <h2 className="text-lg md:text-2xl font-semibold">
                     {experience.company}
                   </h2>
-                  <p className="text-gray-400 italic">{experience.role}</p>
-                  <p className="text-gray-400 mb-4">{experience.duration}</p>
-                  <p className="text-slate-300">{experience.description}</p>
+                  <p className="text-zinc-400 italic">{experience.role}</p>
+                  <p className="text-zinc-400 mb-4">{experience.duration}</p>
+                  <p className="text-zinc-300">{experience.description}</p>
                 </div>
               ))}
             </div>

@@ -7,7 +7,7 @@ const Experience = () => {
           role: "Lead Software Engineer",
           company: "CeX Webuy Entertainment Pvt Ltd",
           location: "Mumbai, India",
-          period: "02/2022 – Current",
+          period: "02/2022 – Present",
           responsibilities: [
             "Led a team of 8+ software engineers in design and development of multiple enterprise-level microservice applications of CeX Group, driving $1.8 billion of revenue every year using the latest technologies of C#, .NET, MSSQL, MySQL, VueJS, ASP.NET MVC, REST API.",
             "Spearheaded the migration of a web application with 32 modules to .NET Core under Tech Modernization eliminating the technical debt of legacy system altogether within 14 weeks of implementation.",
@@ -52,7 +52,7 @@ const Experience = () => {
                         <p className="italic text-white">
                           {exp.company} - {exp.location}
                         </p>
-                        <p className="mb-2">{exp.period}</p>
+                        <p className=" mb-2">{exp.period}</p>
                         <ul className="triangle-bullet list-none space-y-1 text-zinc-400">
                           {exp.responsibilities.map((responsibility, i) => (
                             <li key={i}>{responsibility}</li>
