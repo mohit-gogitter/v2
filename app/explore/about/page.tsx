@@ -9,7 +9,7 @@ const About = () => {
   useEffect(() => {
     const sections = document.querySelectorAll("div[id]");
     const options = {
-      rootMargin: "0px",
+      rootMargin: "10px",
       threshold: 0.5,
     };
 
@@ -104,8 +104,8 @@ const About = () => {
         </div>
         <div className="md:col-span-7 text-justify md:mr-8">
           <div className="md:grid md:grid-cols-3 gap-4">
-            <div className="hidden md:block md:col-span-1 sticky-div p-4">
-              <div className="md:mt-14">
+            <div className="block md:col-span-1 sticky-div p-4">
+              <div id="nameandrole" className="md:mt-14">
                 <h1 className="text-5xl font-bold text-gray-900 relative mb-1">
                   <span className="relative z-10">&nbsp;Mohit Singh</span>
                   <span className="absolute top-0 left-0 w-72 md:w-80 h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg transform -rotate-2 -translate-y-1 translate-x-1 z-0"></span>
@@ -118,60 +118,116 @@ const About = () => {
                   </span>
                 </h4>
               </div>
-              <div className="mt-10 ml-4 text-base">
-                <a
-                  href="#about"
-                  className={`exploreLink group flex items-center text-base font-semibold transition-all duration-300 ${
-                    activeSection === "about"
-                      ? "text-teal-500"
-                      : "text-gray-300"
-                  }`}
-                >
-                  <span
-                    className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
-                      activeSection === "about" ? "w-20" : "group-hover:w-20"
+              <div id="verticalnavlinks" className="hidden md:block mt-10 text-base">
+                <div className="flex flex-wrap justify-between ml-4 md:ml-0 md:flex-col">
+                  <a
+                    href="#about"
+                    className={`exploreLink group flex items-center text-base font-semibold transition-all duration-300 ${
+                      activeSection === "about"
+                        ? "text-teal-500"
+                        : "text-gray-300"
                     }`}
-                  ></span>
-                  <span>ABOUT</span>
-                </a>
-                <a
-                  href="#experience"
-                  className={`exploreLink group flex items-center font-semibold transition-all duration-300 ${
-                    activeSection === "experience"
-                      ? "text-teal-500"
-                      : "text-gray-300"
-                  }`}
-                >
-                  <span
-                    className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                  >
+                    <span
+                      className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                        activeSection === "about" ? "w-20" : "group-hover:w-20"
+                      }`}
+                    ></span>
+                    <span>ABOUT</span>
+                  </a>
+                  <a
+                    href="#experience"
+                    className={`exploreLink group flex items-center font-semibold transition-all duration-300 ${
                       activeSection === "experience"
-                        ? "w-20"
-                        : "group-hover:w-20"
+                        ? "text-teal-500"
+                        : "text-gray-300"
                     }`}
-                  ></span>
-                  <span>EXPERIENCE</span>
-                </a>
-                <a
-                  href="#qualification"
-                  className={`exploreLink group flex items-center font-semibold transition-all duration-300 ${
-                    activeSection === "qualification"
-                      ? "text-teal-500"
-                      : "text-gray-300"
-                  }`}
-                >
-                  <span
-                    className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                  >
+                    <span
+                      className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                        activeSection === "experience"
+                          ? "w-20"
+                          : "group-hover:w-20"
+                      }`}
+                    ></span>
+                    <span>EXPERIENCE</span>
+                  </a>
+                  <a
+                    href="#qualification"
+                    className={`exploreLink group flex items-center font-semibold transition-all duration-300 ${
                       activeSection === "qualification"
-                        ? "w-20"
-                        : "group-hover:w-20"
+                        ? "text-teal-500"
+                        : "text-gray-300"
                     }`}
-                  ></span>
-                  <span>QUALIFICATION</span>
-                </a>
+                  >
+                    <span
+                      className={`inline-block w-14 h-[2px] bg-gradient-to-b from-blue-500 to-teal-400 mr-3 transform transition-all duration-300 ${
+                        activeSection === "qualification"
+                          ? "w-20"
+                          : "group-hover:w-20"
+                      }`}
+                    ></span>
+                    <span>QUALIFICATION</span>
+                  </a>
+                </div>
+              </div>
+              <div id="horizontalnavlinks" className="block md:hidden mt-4 text-base">
+                <div className=" bottom-0 left-0 w-full shadow-lg z-50">
+                  <div className="flex justify-around">
+                    <a
+                      href="#about"
+                      className={`exploreLink flex flex-col items-center py-2 transition-all duration-300 ${
+                        activeSection === "about"
+                          ? "text-teal-500"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      <span className="text-sm font-semibold">ABOUT</span>
+                      <span
+                        className={`block w-full h-[2px] mt-1 bg-gradient-to-b from-blue-500 to-teal-400 transform transition-all duration-300 ${
+                          activeSection === "about" ? "w-12" : "w-8"
+                        }`}
+                      ></span>
+                    </a>
+                    <a
+                      href="#experience"
+                      className={`exploreLink flex flex-col items-center py-2 transition-all duration-300 ${
+                        activeSection === "experience"
+                          ? "text-teal-500"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      <span className="text-sm font-semibold">EXPERIENCE</span>
+                      <span
+                        className={`block w-full h-[2px] mt-1 bg-gradient-to-b from-blue-500 to-teal-400 transform transition-all duration-300 ${
+                          activeSection === "experience" ? "w-12" : "w-8"
+                        }`}
+                      ></span>
+                    </a>
+                    <a
+                      href="#qualification"
+                      className={`exploreLink flex flex-col items-center py-2 transition-all duration-300 ${
+                        activeSection === "qualification"
+                          ? "text-teal-500"
+                          : "text-gray-500"
+                      }`}
+                    >
+                      <span className="text-sm font-semibold">
+                        QUALIFICATION
+                      </span>
+                      <span
+                        className={`block w-full h-[2px] mt-1 bg-gradient-to-b from-blue-500 to-teal-400 transform transition-all duration-300 ${
+                          activeSection === "qualification" ? "w-12" : "w-8"
+                        }`}
+                      ></span>
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
+
             <div className="md:col-span-2 relative w-full p-4">
-              <div className="md:hidden mb-10">
+              {/* <div className="md:hidden mb-10">
                 <h1 className="text-5xl font-bold text-gray-900 relative mb-1">
                   <span className="relative z-10">&nbsp;Mohit Singh</span>
                   <span className="absolute top-0 left-0 w-72 md:w-80 h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg transform -rotate-2 -translate-y-1 translate-x-1 z-0"></span>
@@ -183,24 +239,26 @@ const About = () => {
                     Full Stack Software Engineer
                   </span>
                 </h4>
-              </div>
+              </div> */}
 
               <div id="about">
-                <h4 className="text-2xl font-bold text-white mb-4">ABOUT</h4>
+                <h4 className="text-2xl font-bold text-white mb-4 relative">
+                  ABOUT
+                </h4>
                 <span className="text-gray-400 text-lg">
                   Back in 2014, I took my first steps into the world of coding
                   while developing a web and mobile application for pre-schools.
-                  Little did I know, this would lead me down a path where I&apos;d
-                  get to shape and refine my skills in software engineering and
-                  web development.
+                  Little did I know, this would lead me down a path where
+                  I&apos;d get to shape and refine my skills in software
+                  engineering and web development.
                   <br />
-                  <br /> Fast forward to today, and I&apos;ve had the privilege of
-                  leading software projects across various sectors—building
+                  <br /> Fast forward to today, and I&apos;ve had the privilege
+                  of leading software projects across various sectors—building
                   innovative solutions for an advertising agency, a start-up, a
                   global corporation, and even a digital product studio.
-                  Currently, I&apos;m focused on creating accessible and impactful
-                  user interfaces at CeX Webuy Entertainment, where I lead a
-                  talented team of software engineers. I thrive in the
+                  Currently, I&apos;m focused on creating accessible and
+                  impactful user interfaces at CeX Webuy Entertainment, where I
+                  lead a talented team of software engineers. I thrive in the
                   intersection of design and engineering, ensuring that the
                   solutions I build are not only robust under the hood but also
                   deliver a seamless user experience. Outside of work, I&apos;ve
@@ -208,21 +266,21 @@ const About = () => {
                   and even ventured into the world of IoT with a Smart Home
                   project. <br />
                   <br />
-                  When I&apos;m not coding, you might find me rock climbing, diving
-                  into a good book, spending time with my family, or tinkering
-                  with new tech ideas. My journey in tech is all about
+                  When I&apos;m not coding, you might find me rock climbing,
+                  diving into a good book, spending time with my family, or
+                  tinkering with new tech ideas. My journey in tech is all about
                   continuous learning and pushing the boundaries of what&apos;s
                   possible—one project at a time.
                 </span>
               </div>
               <div id="experience" className="mt-10">
-                <h4 className=" text-2xl font-bold text-white mb-4">
+                <h4 className="text-2xl font-bold text-white mb-4 relative">
                   EXPERIENCE
                 </h4>
                 <Experience />
               </div>
               <div id="qualification">
-                <h4 className=" text-2xl font-bold text-white mb-4">
+                <h4 className="text-2xl font-bold text-white mb-4 relative">
                   QUALIFICATION
                 </h4>
                 <Qualification />
