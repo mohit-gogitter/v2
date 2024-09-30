@@ -15,13 +15,21 @@ html {
 html,
 body {
   font-family: "Space Grotesk", sans-serif;
-  background: linear-gradient(
+  /* background: linear-gradient(
     135deg,
     #0e161a,
     #223242,
     #151d20,
     #163040,
     #0e1113
+  ); */
+  background: linear-gradient(
+    135deg,
+    rgb(7, 12, 27),
+    #13181c,
+    rgb(3, 6, 14),
+    #13181c,
+    rgb(7, 12, 27)
   );
   color: theme("colors.foreground");
 }
@@ -174,11 +182,11 @@ a {
   z-index: 50; /* Ensure it stays above other content */
   background: linear-gradient(
     135deg,
-    rgba(14, 22, 26, 0.6),
-    rgba(34, 50, 66, 0.6),
-    rgba(21, 29, 32, 0.6),
-    rgba(22, 48, 64, 0.6),
-    rgba(14, 17, 19, 0.6)
+    rgb(35, 35, 36),
+    #1a1b1c,
+    rgb(35, 35, 36),
+    #1a1b1c,
+    rgb(35, 35, 36)
   );
   backdrop-filter: blur(
     10px

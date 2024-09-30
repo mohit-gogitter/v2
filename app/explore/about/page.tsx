@@ -33,7 +33,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="bg-zinc-900 pb-4 ">
+    <div className="bg-gray-950 pb-4 ">
       <div className="md:grid md:grid-cols-8">
         <div className="md:mt-32 webkit-center col-span-1">
           <div className="hidden md:inline-block fixed">
@@ -106,12 +106,14 @@ const About = () => {
           <div className="md:grid md:grid-cols-3 gap-4">
             <div className="block md:col-span-1 sticky-div p-4">
               <div id="nameandrole" className="md:mt-14">
-                <h1 className="text-5xl font-bold text-gray-900 relative mb-1">
-                  <span className="relative z-10">&nbsp;Mohit Singh</span>
-                  <span className="absolute top-0 left-0 w-72 md:w-80 h-full bg-gradient-to-r from-blue-400 to-purple-500 rounded-lg transform -rotate-2 -translate-y-1 translate-x-1 z-0"></span>
-                  <span className="block h-1 bg-gradient-to-r from-purple-500 to-blue-400 mt-2 transform scale-x-0 origin-left transition-transform duration-500 ease-in-out group-hover:scale-x-100"></span>
+                <h1 className="relative inline-block text-5xl font-medium text-gray-800 bg-purple-400 px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500">
+                  <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg"></span>
+                  <span className="relative z-10 font-semibold">
+                   Mohit Singh
+                  </span>
                 </h1>
-                <h4 className="relative inline-block text-l font-medium text-gray-800 bg-white px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500 transform -rotate-2">
+                <br/>
+                <h4 className="relative inline-block text-l font-medium text-gray-800 bg-white mt-2 px-4 py-2 rounded-lg shadow-lg border-l-4 border-blue-500">
                   <span className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-purple-500 opacity-20 rounded-lg"></span>
                   <span className="relative z-10 font-semibold">
                     Full Stack Software Engineer
