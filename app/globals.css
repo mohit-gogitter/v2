@@ -25,11 +25,11 @@ body {
   ); */
   background: linear-gradient(
     135deg,
-    rgb(7, 12, 27),
-    #0f1111,
-    rgb(5, 9, 16),
-    #090a0a,
-    rgb(7, 12, 27)
+    rgb(25, 35, 60),
+    #0d0f10,
+    rgb(14, 20, 35),
+    rgb(4, 6, 15),
+    rgb(12, 18, 37)
   );
   color: theme("colors.foreground");
 }
