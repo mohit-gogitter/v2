@@ -121,7 +121,7 @@ const Home = () => {
                 </a>
                 <a></a>
               </div>
-              <div className="flex justify-center space-x-4 mt-6">
+              <div className="flex justify-center space-x-4 mt-9">
                 <Link
                   href="../explore/about"
                   className="rgb-button text-white font-bold py-4 px-8 rounded-2xl shadow-full transform transition-transform duration-300 hover:scale-110"
