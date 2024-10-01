@@ -1,4 +1,5 @@
 "use client";
+import Head from 'next/head';
 const Projects = () => {
   const projects = [
     {
@@ -17,6 +18,9 @@ const Projects = () => {
   ];
 return (
     <div>
+      <Head>
+        <title>Mohit Singh - Projects</title>
+      </Head>
          {/* Projects Section */}
          <section
           id="projects"
