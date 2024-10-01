@@ -1,8 +1,12 @@
 "use client";
+import Head from 'next/head';
 const Contact = () => {
-    return (
-      <div>
-        <div className="mb-4 p-6 grid md:grid-cols-8 md:p-0">
+  return (
+    <div>
+      <Head>
+        <title>Mohit Singh - Contact</title>
+      </Head>
+      <div className="mb-4 p-6 grid md:grid-cols-8 md:p-0">
         <div className="md:mt-32 webkit-center col-span-1">
           <div className="hidden md:block">
             <a className="h-12" href="" target="_blank"></a>
@@ -77,14 +81,71 @@ const Contact = () => {
               target="_blank"
               className="text-4xl text-white font-bold bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-[length:100%_4px] bg-no-repeat bg-bottom py-2"
             >
-              Contact
+              Get in Touch
             </a>
+          </div>
+          <div className=" flex flex-col justify-center items-center p-4">            
+            <p className="text-lg text-gray-300 mb-2">
+              I’d love to hear from you! Whether you’re a recruiter or just want
+              to say hi, feel free to drop a message.
+            </p>
+            <form className="bg-black bg-opacity-70 shadow-lg rounded-lg p-8 max-w-lg w-full">
+              <div className="mb-6">
+                <label className="block text-gray-300 mb-2" htmlFor="name">
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Enter your name"
+                  className="w-full px-4 py-2 border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-purple-500 rounded-md outline-none"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-gray-300 mb-2" htmlFor="company">
+                  Company Name
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  placeholder="Enter company name"
+                  className="w-full px-4 py-2 border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-purple-500 rounded-md outline-none"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-gray-300 mb-2" htmlFor="email">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  placeholder="Enter your email"
+                  className="w-full px-4 py-2 border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-purple-500 rounded-md outline-none"
+                />
+              </div>
+              <div className="mb-6">
+                <label className="block text-gray-300 mb-2" htmlFor="message">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  placeholder="Enter your message"
+                  className="w-full px-4 py-2 border border-gray-600 bg-gray-900 text-white focus:ring-2 focus:ring-purple-500 rounded-md outline-none"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-purple-500 to-indigo-600 text-white py-3 rounded-md shadow-md font-semibold hover:opacity-90 transition-opacity"
+              >
+                Send Message
+              </button>
+            </form>
           </div>
         </div>
         <div className="col-span-1 justify-center"></div>
       </div>
-      </div>
-    );
-  };
-  
-  export default Contact;
+    </div>
+  );
+};
+
+export default Contact;

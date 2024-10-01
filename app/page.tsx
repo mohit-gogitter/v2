@@ -1,16 +1,19 @@
 // app/page.tsx
 "use client";
+import Head from 'next/head';
 import Image from "next/image";
-import "./explore/styles.css";
+import "./(explore)/styles.css";
 import MyLogo from "../public/logo-no-background.png";
 import MyImage from "./globalcomponents/image_square";
 import Link from "next/link";
 const Home = () => {
   return (
     <div className="flex flex-col justify-between text-foreground">
-      {/* <Header></Header> */}
+      <Head>
+        <title>Mohit Singh - About</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <main>
-        {/* Hero Section */}
         <div className="md:grid md:grid-cols-12 md:divide-x-2 flex flex-col-reverse divide-y divide-y-reverse border-0">
           <div className="webkit-center border-none col-span-7">
             <section className="text-center py-8">
@@ -123,7 +126,7 @@ const Home = () => {
               </div>
               <div className="flex justify-center space-x-4 mt-9">
                 <Link
-                  href="../explore/about"
+                  href="./about"
                   className="rgb-button text-white font-bold py-4 px-8 rounded-2xl shadow-full transform transition-transform duration-300 hover:scale-110"
                 >
                   Explore{" "}
@@ -146,14 +149,6 @@ const Home = () => {
           </div>
           <div className="webkit-center border-none float-left col-span-5">
             <div className="md:py-14">
-              {/* <Image
-                className="w-80 h-80 inline-flex border-2 rounded-full glowing-border mx-auto object-cover left-0"
-                src={MyPic}
-                alt="My Picture"
-                height={0}
-                width={0}
-                style={{ width: "50%", height: "40%" }}
-              /> */}
               <MyImage></MyImage>
             </div>
           </div>
